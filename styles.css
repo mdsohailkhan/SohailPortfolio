@@ -530,3 +530,56 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Existing mobile styles... */
+
+    /* Make nav menu vertical and appear from the right */
+    nav ul {
+        flex-direction: column;
+        /* vertical layout */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 220px;
+        /* adjust as needed */
+        background-color: rgba(10, 25, 47, 0.95);
+        padding-top: 80px;
+        /* space for header */
+        gap: 1.5rem;
+        display: none;
+        /* hidden by default, JS will toggle */
+        z-index: 999;
+        flex-wrap: nowrap;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+        /* hidden off-screen */
+    }
+
+    /* When toggled with JS */
+    nav ul.show {
+        display: flex;
+        transform: translateX(0);
+        /* slide in from right */
+    }
+
+    nav li {
+        text-align: left;
+        padding: 1rem 2rem;
+    }
+}
+
+
+
+
+
+
+
